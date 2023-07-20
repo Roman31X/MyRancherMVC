@@ -1,23 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 
 public class Forraje extends Vaca{
-    //Atributos emcapsulados de forraje
     protected double peso1;
     protected double peso2;
     protected double hectaria;
-    //Contructor
+    
     public Forraje(double peso1, double peso2, double hectaria, double peso_adulto, double peso_ternero, double canti_adulto, double canti_ternero) {
         super(peso_adulto, peso_ternero, canti_adulto, canti_ternero);
         this.peso1 = peso1;
         this.peso2 = peso2;
         this.hectaria = hectaria;
     }
-    //Metodo gettter y setter
+    
     public double getPeso1() {
         return peso1;
     }

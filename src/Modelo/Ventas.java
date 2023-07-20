@@ -1,20 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 public class Ventas extends Vaca{
-    //Atributos emcapsulados de la clase venta 
+    
     protected int sacrificios;
     protected double precio;
-    //Contructor
+    
     public Ventas(int sacrificios, double precio, double peso_sacrificado) {
         super(peso_sacrificado);
         this.sacrificios = sacrificios;
         this.precio = precio;
     }
-    //Metodo getter y setter
+    
     public int getSacrificios() {
         return sacrificios;
     }

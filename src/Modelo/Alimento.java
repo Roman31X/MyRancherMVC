@@ -2,16 +2,16 @@
 package Modelo;
 
 public class Alimento extends Vaca{
-    //Atributos emcapsulados de la clase alimentos
+    
     protected double cantidad_saco;
     protected double peso_saco;
-    //CONTRUCTOR DE LA CLASE ALIMENTO:
+    
     public Alimento(double cantidad_saco, double peso_saco, double peso_adulto, double peso_ternero, double canti_adulto, double canti_ternero) {
         super(peso_adulto, peso_ternero, canti_adulto, canti_ternero);
         this.cantidad_saco = cantidad_saco;
         this.peso_saco = peso_saco;
     }
-    //METODOS GETTER Y SETTER
+    
     public double getCantidad_saco() {
         return cantidad_saco;
     }
