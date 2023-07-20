@@ -3,7 +3,7 @@ import Vista.*;
 import java.awt.event.*;
 
 public class ControlMenuPrincipal implements ActionListener{
-    private Menu_Principal menupri1;
+    private final Menu_Principal menupri1;
     private Capacitacion cap1;
     private Calculo_Alimento calali;
     private Calculo_Forraje calfor;

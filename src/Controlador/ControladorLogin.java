@@ -6,10 +6,10 @@ import javax.swing.JOptionPane;
 
 public class ControladorLogin implements ActionListener{
     private final Login log1;
-    private final Menu_Principal menu1;
-    public ControladorLogin(Login logi, Menu_Principal menu1) {
+    private Menu_Principal menu1;
+    
+    public ControladorLogin(Login logi) {
         this.log1 = logi;
-        this.menu1 = menu1;
         
         logi.Ingresar.addActionListener(this);
     }
@@ -21,6 +21,8 @@ public class ControladorLogin implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        
+        menu1 = new Menu_Principal();
         
         if (log1.Usuario.getText().equals("admin") && log1.Contraseña.getText().equals("1234")) {
             JOptionPane.showMessageDialog(null,"SE HA INICIADO CORRECTAMENTE\n GRACIAS!!");

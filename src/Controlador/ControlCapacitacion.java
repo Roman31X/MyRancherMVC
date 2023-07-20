@@ -11,8 +11,8 @@ import javax.swing.JOptionPane;
 
 public class ControlCapacitacion implements ActionListener{
     
-    private Menu_Principal men;
-    private  Capacitacion ca2;
+    private final Menu_Principal men;
+    private final Capacitacion ca2;
     
     public ControlCapacitacion(Menu_Principal men1,Capacitacion ca1) {
         this.men = men1;
