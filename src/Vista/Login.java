@@ -52,6 +52,7 @@ public class Login extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/logo_MyRancher.png"))); // NOI18N
 

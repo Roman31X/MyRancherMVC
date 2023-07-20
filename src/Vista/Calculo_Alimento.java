@@ -46,6 +46,7 @@ public class Calculo_Alimento extends javax.swing.JFrame {
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/C.alime.jpg"))); // NOI18N
 
