@@ -11,6 +11,7 @@ public class ControladorLogin implements ActionListener{
     public ControladorLogin(Login logi) {
         this.log1 = logi;
         
+        logi.Ingresar1.addActionListener(this);
         logi.Ingresar.addActionListener(this);
     }
     
@@ -21,18 +22,22 @@ public class ControladorLogin implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        String accion = e.getActionCommand();
         menu1 = new Menu_Principal();
-        
-        if (log1.Usuario.getText().equals("admin") && log1.Contraseña.getText().equals("1234")) {
-            JOptionPane.showMessageDialog(null,"SE HA INICIADO CORRECTAMENTE\n GRACIAS!!");
-            ControlMenuPrincipal menu = new ControlMenuPrincipal(menu1);
-            log1.setVisible(false);
-            menu.Mostrar();            
-        } else {
-            JOptionPane.showMessageDialog(null,"El Usuario o Contraseña incorrecto\n vuelva ingresar por favor");
+        switch(accion){
+            case "INGRESAR":
+                if (log1.Usuario.getText().equals("admin") && log1.Contraseña.getText().equals("1234")) {
+                    JOptionPane.showMessageDialog(null,"SE HA INICIADO CORRECTAMENTE\n GRACIAS!!");
+                    ControlMenuPrincipal menu = new ControlMenuPrincipal(menu1);
+                    log1.setVisible(false);
+                    menu.Mostrar();            
+                } else {
+                    JOptionPane.showMessageDialog(null,"El Usuario o Contraseña incorrecto\n vuelva ingresar por favor");
+                }
+                break;
+            case "X":
+                System.exit(0);
+                break;
         }
     }
-    
-    
 }
