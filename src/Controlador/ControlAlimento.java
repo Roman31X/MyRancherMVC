@@ -21,7 +21,6 @@ public class ControlAlimento implements ActionListener{
     }
     
     public void Mostrar(){
-        calali3.setTitle("Calculo de Alimento MyRancher");
         calali3.setVisible(true);        
     }
     

@@ -20,7 +20,6 @@ public class ControlForraje implements ActionListener{
     }
     
     public void Mostrar(){
-        calfor4.setTitle("Calculo Forraje MyRancher [UwU]");
         calfor4.setVisible(true);        
     }
     

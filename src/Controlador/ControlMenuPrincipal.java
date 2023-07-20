@@ -20,7 +20,6 @@ public class ControlMenuPrincipal implements ActionListener{
     }
     
     public void Mostrar(){
-        menupri1.setTitle("Menu Principal MyRancher [UwU]");
         menupri1.setVisible(true);        
     }
     

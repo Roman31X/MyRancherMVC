@@ -23,7 +23,6 @@ public class ControlCapacitacion implements ActionListener{
     }
     
     public void Mostrar(){
-        ca2.setTitle("Capacitación MyRancher");
         ca2.setVisible(true);
     }
     

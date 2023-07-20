@@ -28,7 +28,6 @@ public class ControlVenta implements ActionListener{
     }
     
     public void Mostrar(){
-        vent4.setTitle("Calculo Ventas MyRancher");
         vent4.setVisible(true);        
     }
     

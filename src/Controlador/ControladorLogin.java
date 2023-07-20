@@ -15,7 +15,6 @@ public class ControladorLogin implements ActionListener{
     }
     
     public void iniciar(){
-        log1.setTitle("Login MyRancher");
         log1.setVisible(true);
     }
     
