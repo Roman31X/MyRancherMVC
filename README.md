@@ -30,7 +30,7 @@ Permite el ingreso de datos de dos muestras de peso de forraje por metro cuadrad
 
 * CALCULO DE VENTA || :bar_chart:
 
-Permite el ingreso de datos como los pesos de las reses sacrificadas, cantidad y el precio por kilo. Finalmente podremos generar una grafica con respecto a la res y susu pesos.
+Permite el ingreso de datos como los pesos de las reses sacrificadas, cantidad y el precio por kilo. Finalmente podremos generar una grafica con respecto a la res y sus pesos.
 
 * SALIR
 
