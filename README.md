@@ -2,7 +2,7 @@
 
 ## DESCRIPCION
 
-Sofware Destokp diseñado como primer proyecto del Curso de Integrador I basado en el lenguaje __Java__ tambien desarrollada con una
+Sofware Desktop diseñado como primer proyecto del Curso de Integrador I basado en el lenguaje __Java__ tambien desarrollada con una
 estructura __MVC__ permitiendo su mejor desarollo a futuras modificaciones. En el presente repositorio encontrara en la carpeta con el 
 codigo fuente, imagenes del software, interfaces del Software, Diagrama UML, Manual de funcionamiento y capturas de ejecución.
 
