@@ -9,7 +9,6 @@ public class ControlAlimento implements ActionListener{
     
     private final Calculo_Alimento alimento;
     private Menu_Principal menu;
-    private Alimento calculo;
     
     public ControlAlimento(Calculo_Alimento calali) {
         this.alimento = calali;
@@ -27,6 +26,8 @@ public class ControlAlimento implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         menu = new Menu_Principal();
+        Alimento calculo;
+        
         String opcion = e.getActionCommand();
         switch(opcion){
             case "CALCULAR" :

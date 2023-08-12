@@ -10,50 +10,50 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 public class ControlVenta implements ActionListener{
-    private final Menu_Principal menupr;
-    private Calculo_Ventas vent4;
-    private Ventas venta;
-    ArrayList<String> data = new ArrayList<>();
-    double peso=0;
     
-    public ControlVenta( Menu_Principal menupr1,Calculo_Ventas ven) {
-        this.menupr=menupr1;
-        this.vent4 = ven;
+    private Calculo_Ventas ventas;
+    private Menu_Principal menu;
+    ArrayList<String> data;
+    double peso = 0;
+    
+    public ControlVenta(Calculo_Ventas ven) {
+        this.ventas = ven;
         
-        vent4.registrar.addActionListener(this);
-        vent4.calcular.addActionListener(this);
-        vent4.limpiar.addActionListener(this);
-        vent4.generar.addActionListener(this);
-        vent4.regresar.addActionListener(this);
+        ventas.registrar.addActionListener(this);
+        ventas.calcular.addActionListener(this);
+        ventas.limpiar.addActionListener(this);
+        ventas.generar.addActionListener(this);
+        ventas.regresar.addActionListener(this);
     }
     
     public void Mostrar(){
-        vent4.setTitle("Calculo Ventas MyRancher");
-        vent4.setVisible(true);        
+        ventas.setTitle("Calculo Ventas MyRancher");
+        ventas.setVisible(true);        
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        data = new ArrayList<String>();
+        Ventas calculo;
         String opcion = e.getActionCommand();
         switch(opcion){
             case "REGISTRAR" :
-                            String dato = vent4.PesoIngresado.getText();
-                            double kilos = Double.parseDouble(vent4.PesoIngresado.getText());
+                            String dato = ventas.PesoIngresado.getText();
+                            double kilos = Double.parseDouble(ventas.PesoIngresado.getText());
                             data.add(dato);
                             peso+=kilos;
                             String contenido = "";
                             for (String d : data) {
                                 contenido += d + "\n";
                             }
-                            vent4.TextPesos.setText(contenido+"\n|| Total de Kilos: ["+peso+" Kg. ]");
-                            vent4.PesoIngresado.setText("");
+                            ventas.TextPesos.setText(contenido+"\n|| Total de Kilos: ["+peso+" Kg. ]");
+                            ventas.PesoIngresado.setText("");
                             break;
             case "CALCULAR" :
-                            int sacrificios = Integer.parseInt(vent4.CantiSacrificado.getText());
-                            double precio = Double.parseDouble(vent4.PrecioKilo.getText());
-                            venta = new Ventas(sacrificios,precio,peso);
-                            vent4.TextSalida.append(venta.toString());
+                            int sacrificios = Integer.parseInt(ventas.CantiSacrificado.getText());
+                            double precio = Double.parseDouble(ventas.PrecioKilo.getText());
+                            calculo = new Ventas(sacrificios,precio,peso);
+                            ventas.TextSalida.append(calculo.toString());
                             break;
             case "GENERAR GRAFICA" :
                             DefaultCategoryDataset datos = new DefaultCategoryDataset();
@@ -73,22 +73,23 @@ public class ControlVenta implements ActionListener{
                             ChartPanel panel = new ChartPanel(grafico_barras);
                             panel.setMouseWheelEnabled(true);
                             panel.setPreferredSize(new Dimension(487, 188));
-                            vent4.PanelGrafica.setLayout(new BorderLayout());
-                            vent4.PanelGrafica.add(panel, BorderLayout.NORTH);
-                            vent4.pack();
-                            vent4.repaint();
+                            ventas.PanelGrafica.setLayout(new BorderLayout());
+                            ventas.PanelGrafica.add(panel, BorderLayout.NORTH);
+                            ventas.pack();
+                            ventas.repaint();
                             break;
             case "LIMPIAR" : 
-                            vent4.CantiSacrificado.setText("");
-                            vent4.PesoIngresado.setText("");
-                            vent4.PrecioKilo.setText("");
-                            vent4.TextPesos.setText("");
-                            vent4.TextSalida.setText("");
+                            ventas.CantiSacrificado.setText("");
+                            ventas.PesoIngresado.setText("");
+                            ventas.PrecioKilo.setText("");
+                            ventas.TextPesos.setText("");
+                            ventas.TextSalida.setText("");
                             break;
             
             case "REGRESAR" :
-                            menupr.setVisible(true);
-                            vent4.setVisible(false);
+                            ControlMenuPrincipal principal = new ControlMenuPrincipal(menu);
+                            principal.Mostrar();
+                            ventas.setVisible(false);
                             break;
         }
         

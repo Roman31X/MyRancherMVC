@@ -8,7 +8,6 @@ public class ControlForraje implements ActionListener{
     
     private final Calculo_Forraje forraje;
     private Menu_Principal menu;
-    private Forraje calculo;
     
     public ControlForraje(Calculo_Forraje calfor) {
         this.forraje = calfor;
@@ -25,6 +24,7 @@ public class ControlForraje implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        Forraje calculo;
         String opcion = e.getActionCommand();
         switch(opcion){
             case "CALCULAR" :   
