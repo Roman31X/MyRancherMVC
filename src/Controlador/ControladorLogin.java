@@ -5,19 +5,19 @@ import Vista.*;
 import javax.swing.JOptionPane;
 
 public class ControladorLogin implements ActionListener{
-    private final Login log1;
+    private final Login login1;
     private Menu_Principal menu1;
     
     public ControladorLogin(Login logi) {
-        this.log1 = logi;
+        this.login1 = logi;
         
-        logi.Ingresar1.addActionListener(this);
-        logi.Ingresar.addActionListener(this);
+        login1.Ingresar1.addActionListener(this);
+        login1.Ingresar.addActionListener(this);
     }
     
     public void iniciar(){
-        log1.setTitle("Login MyRancher");
-        log1.setVisible(true);
+        login1.setTitle("Login MyRancher");
+        login1.setVisible(true);
     }
     
     @Override
@@ -26,10 +26,10 @@ public class ControladorLogin implements ActionListener{
         menu1 = new Menu_Principal();
         switch(accion){
             case "INGRESAR":
-                if (log1.Usuario.getText().equals("admin") && log1.Contraseña.getText().equals("1234")) {
+                if (login1.Usuario.getText().equals("admin") && login1.Contraseña.getText().equals("1234")) {
                     JOptionPane.showMessageDialog(null,"SE HA INICIADO CORRECTAMENTE\n GRACIAS!!");
                     ControlMenuPrincipal menu = new ControlMenuPrincipal(menu1);
-                    log1.setVisible(false);
+                    login1.setVisible(false);
                     menu.Mostrar();            
                 } else {
                     JOptionPane.showMessageDialog(null,"El Usuario o Contraseña incorrecto\n vuelva ingresar por favor");

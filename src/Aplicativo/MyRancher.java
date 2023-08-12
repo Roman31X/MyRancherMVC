@@ -6,8 +6,8 @@ import Vista.Login;
 
 public class MyRancher {
     public static void main(String[] args) {
-        Login lo = new Login();
-        ControladorLogin login = new ControladorLogin(lo);
+        Login objetoLogin = new Login();
+        ControladorLogin login = new ControladorLogin(objetoLogin);
         login.iniciar();
     }
 }
