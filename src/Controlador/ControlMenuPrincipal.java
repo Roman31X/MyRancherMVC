@@ -39,21 +39,21 @@ public class ControlMenuPrincipal implements ActionListener{
                                 menu.setVisible(false);
                                 ca.Mostrar();
                                 break;
-//            case "CALCULO DE ALIMENTO" : 
-//                                ControlAlimento ali = new ControlAlimento(alimento);
-//                                menu.setVisible(false);
-//                                ali.Mostrar();
-//                                break;
-//            case "CALCULO DE FORRAJE" : 
-//                                ControlForraje forra = new ControlForraje(forraje);
-//                                menu.setVisible(false);
-//                                forra.Mostrar();
-//                                break;
-//            case "CALCULO DE VENTAS" :
-//                                ControlVenta cven = new ControlVenta(ventas);
-//                                menu.setVisible(false);
-//                                cven.Mostrar();
-//                                break;
+            case "CALCULO DE ALIMENTO" : 
+                                ControlAlimento ali = new ControlAlimento(alimento);
+                                menu.setVisible(false);
+                                ali.Mostrar();
+                                break;
+            case "CALCULO DE FORRAJE" : 
+                                ControlForraje forra = new ControlForraje(forraje);
+                                menu.setVisible(false);
+                                forra.Mostrar();
+                                break;
+            case "CALCULO DE VENTAS" :
+                                ControlVenta cven = new ControlVenta(ventas);
+                                menu.setVisible(false);
+                                cven.Mostrar();
+                                break;
             case "SALIR" : 
                                 System.exit(0);
                                 break;
